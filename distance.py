@@ -11,7 +11,7 @@ gpio.setup(trig.gpio.OUT)
 gpio.setup(echo, gpio.IN)
 
 try:
-	while True
+	while True:
 		gpio.output(trig,False)
 		time.sleep(0.5)
 
@@ -28,6 +28,7 @@ try:
 				distance = pulse_duration * 17000
 				distance = round(distance,2)
 			print("Distance : ", distance, "cm")
+			time.sleep(0.5)
 
 		except :
 			gpio.cleanup()
